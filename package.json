@@ -1,5 +1,5 @@
 {
-  "name": "hono-learnig",
+  "name": "portfolio-hono",
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",

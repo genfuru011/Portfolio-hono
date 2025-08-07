@@ -12,7 +12,7 @@ const App = () => {
         <header class="text-center mb-16">
           <div class="mb-8">
             <img
-              src="/images/profile.jpg"
+              src="https://raw.githubusercontent.com/genfuru011/Portfolio-hono/main/public/images/profile.jpg"
               alt="Hiroto Furugen"
               class="w-40 h-40 rounded-full mx-auto mb-8 object-cover shadow-lg"
             />

@@ -2,14 +2,19 @@
 
 A clean and modern portfolio website built with [Hono](https://hono.dev/) and Tailwind CSS, designed to showcase professional experience and education in a minimalist style.
 
-## Features
+## 🌐 Live Demo
+
+Visit the live site: [https://portfolio-hono.hiro-genfuru0119.workers.dev](https://portfolio-hono.hiro-genfuru0119.workers.dev)
+
+## ✨ Features
 
 - 🎨 Clean, minimalist design inspired by modern portfolio layouts
 - 📱 Fully responsive design
 - ⚡ Built with Hono for fast performance
 - 🎯 Deployed on Cloudflare Workers
 - 🔧 TypeScript support
-- 💨 Tailwind CSS for styling
+- 💨 Tailwind CSS (CDN) for styling
+- 📸 GitHub-hosted images for reliable asset delivery
 
 ## Tech Stack
 
@@ -50,9 +55,9 @@ npm run dev
 
 ### Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
+- `npm run dev` - Start development server with Wrangler
+- `npm run build` - Build for production (dry run)
+- `npm run preview` - Preview with Wrangler local mode
 - `npm run deploy` - Deploy to Cloudflare Workers
 - `npm run cf-typegen` - Generate Cloudflare types
 
@@ -64,13 +69,12 @@ Portfolio-hono/
 │   └── images/
 │       └── profile.jpg
 ├── src/
-│   ├── index.tsx          # Main application component
-│   ├── renderer.tsx       # HTML renderer
-│   └── style.css          # Global styles
+│   ├── index.tsx          # Main application component and routes
+│   └── renderer.tsx       # HTML renderer with inline styles
 ├── package.json
 ├── tsconfig.json
 ├── vite.config.ts
-└── wrangler.jsonc         # Cloudflare Workers configuration
+└── wrangler.toml          # Cloudflare Workers configuration
 ```
 
 ## Deployment
@@ -83,7 +87,7 @@ npm run deploy
 
 Make sure you have:
 1. A Cloudflare account
-2. Wrangler CLI configured with your account
+2. Wrangler CLI configured with your account (`wrangler login`)
 
 ## Customization
 
@@ -103,7 +107,9 @@ The design uses Tailwind CSS. Customize the appearance by:
 
 ### Profile Image
 
-Replace `public/images/profile.jpg` with your own profile photo.
+The profile image is currently hosted on GitHub. To update:
+1. Replace `public/images/profile.jpg` in your repository
+2. Update the GitHub raw URL in `src/index.tsx` if needed
 
 ## Contributing
 

@@ -5,4 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [cloudflare(), ssrPlugin(), tailwindcss()],
+  build: {
+    rollupOptions: {
+      input: "/src/index.tsx",
+    },
+  },
 });

@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import { renderer } from "./renderer";
+import "./style.css";
 
 const app = new Hono();
 

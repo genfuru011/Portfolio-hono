@@ -2,19 +2,19 @@
 
 A clean and modern portfolio website built with [Hono](https://hono.dev/) and Tailwind CSS, designed to showcase professional experience and education in a minimalist style.
 
-## 🌐 Live Demo
+##  Live Demo
 
 Visit the live site: [https://portfolio-hono.hiro-genfuru0119.workers.dev](https://portfolio-hono.hiro-genfuru0119.workers.dev)
 
-## ✨ Features
+##  Features
 
-- 🎨 Clean, minimalist design inspired by modern portfolio layouts
-- 📱 Fully responsive design
-- ⚡ Built with Hono for fast performance
-- 🎯 Deployed on Cloudflare Workers
-- 🔧 TypeScript support
-- 💨 Tailwind CSS (CDN) for styling
-- 📸 GitHub-hosted images for reliable asset delivery
+-  Clean, minimalist design inspired by modern portfolio layouts
+-  Fully responsive design
+-  Built with Hono for fast performance
+-  Deployed on Cloudflare Workers
+-  TypeScript support
+-  Tailwind CSS (CDN) for styling
+-  GitHub-hosted images for reliable asset delivery
 
 ## Tech Stack
 

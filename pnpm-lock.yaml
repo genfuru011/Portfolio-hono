@@ -37,7 +37,7 @@ importers:
         specifier: ^0.3.0
         version: 0.3.0
       wrangler:
-        specifier: ^4.17.0
+        specifier: ^4.38.0
         version: 4.38.0
 
 packages:

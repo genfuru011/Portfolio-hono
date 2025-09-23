@@ -5,6 +5,14 @@ const app = new Hono();
 
 app.use(renderer);
 
+// Temporary in-memory posts (will be replaced by real content loader later)
+const posts = [
+  { id: 1, title: "First Post", body: "Hello Solid + Hono" },
+  { id: 2, title: "Migration Note", body: "Tracking the migration" }
+];
+
+app.get('/api/posts', (c) => c.json(posts));
+
 const App = () => {
   return (
     <div class="min-h-screen bg-white">

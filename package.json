@@ -5,8 +5,8 @@
   "packageManager": "pnpm@10.17.1",
   "scripts": {
     "dev": "pnpm -r --parallel dev",
-    "dev:frontend": "pnpm --filter frontend dev",
-    "dev:backend": "pnpm --filter backend dev",
-    "deploy:backend": "pnpm --filter backend deploy"
+    "dev:frontend": "pnpm --filter portfolio-frontend dev",
+    "dev:backend": "pnpm --filter portfolio-backend dev",
+    "deploy:backend": "pnpm --filter portfolio-backend deploy"
   }
 }

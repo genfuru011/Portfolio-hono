@@ -146,6 +146,11 @@ cd backend && pnpm install && pnpm dev   # starts API (default 8787 via wrangler
 cd frontend && pnpm install && pnpm dev  # starts Vite (5173) with proxy to backend /api
 ```
 
+One-shot (both in parallel from root, ensures content build first):
+```
+pnpm dev:both
+```
+
 Next steps (planned):
 1. Markdown content loader (gray-matter) in backend.
 2. Solid Router for /, /blog, /blog/:slug.

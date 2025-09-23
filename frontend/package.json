@@ -8,10 +8,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "solid-js": "^1.8.17"
+    "solid-js": "^1.8.17",
+    "@solidjs/router": "^0.14.5"
   },
   "devDependencies": {
     "vite": "^6.3.5",
-    "@vitejs/plugin-basic-ssl": "^1.1.0"
+    "@vitejs/plugin-basic-ssl": "^1.1.0",
+    "vite-plugin-solid": "^2.10.1"
   }
 }

@@ -1,5 +1,6 @@
 import BlogList from './components/BlogList.jsx';
 import SocialIcons from './components/SocialIcons.jsx';
+import { A } from '@solidjs/router';
 
 function Education() {
   return (
@@ -56,8 +57,9 @@ function Experience() {
 function BlogSection() {
   return (
     <section class="mb-16">
-      <h2 class="text-2xl font-normal text-gray-900 mb-8">Blog</h2>
-      <BlogList />
+      <h2 class="text-2xl font-normal text-gray-900 mb-4">Blog</h2>
+      <p class="text-sm text-gray-600 mb-4">最新記事はブログ一覧で確認できます。</p>
+      <A href="/blog" class="text-blue-600 hover:underline">Go to Blog →</A>
     </section>
   );
 }

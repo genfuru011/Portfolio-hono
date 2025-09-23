@@ -1,5 +1,7 @@
 # Portfolio Website
 
+> Migration in progress: transitioning to a split architecture (SolidJS SPA + Hono API). See section "Migration (SolidJS + Split Backend)" below.
+
 A clean and modern portfolio website built with [Hono](https://hono.dev/) and Tailwind CSS, designed to showcase professional experience and education in a minimalist style.
 
 ##  Live Demo
@@ -122,3 +124,32 @@ The profile image is currently hosted on GitHub. To update:
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## Migration (SolidJS + Split Backend)
+
+The project is being restructured into a pnpm workspace with two packages:
+
+```
+pnpm-workspace.yaml
+frontend/   # SolidJS SPA (Vite)
+backend/    # Hono API (Cloudflare Workers)
+```
+
+Current status:
+- Legacy root `src/` still serves SSR HTML via Hono.
+- New `frontend/` started (SolidJS + fetch to /api/posts).
+- New `backend/` exposes `/api/health`, `/api/posts`, `/api/posts/:slug` (in-memory data for now).
+
+Local development:
+```
+cd backend && pnpm install && pnpm dev   # starts API (default 8787 via wrangler)
+cd frontend && pnpm install && pnpm dev  # starts Vite (5173) with proxy to backend /api
+```
+
+Next steps (planned):
+1. Markdown content loader (gray-matter) in backend.
+2. Solid Router for /, /blog, /blog/:slug.
+3. Remove legacy root SSR once feature parity reached.
+4. Deploy: Cloudflare Pages (frontend) + Workers (backend) or unified pipeline.
+
+Tracking doc: `note/solidjs-hono-migration.md`

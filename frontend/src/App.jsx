@@ -1,6 +1,41 @@
-import BlogList from './components/BlogList.jsx';
+import BlogList from './components/BlogList.jsx'; // (legacy/debug - kept temporarily)
 import SocialIcons from './components/SocialIcons.jsx';
 import { A } from '@solidjs/router';
+import { createResource } from 'solid-js';
+
+function BlogPreview() {
+  const fetchPosts = async () => {
+    const r = await fetch('/api/posts');
+    if (!r.ok) throw new Error('Failed');
+    return r.json();
+  };
+  const [posts] = createResource(fetchPosts);
+  return (
+    <div class="mt-4 border border-gray-200 rounded-lg p-4 bg-white/60 shadow-sm">
+      {posts.loading && <p class="text-sm text-gray-500">Loading...</p>}
+      {posts.error && <p class="text-sm text-red-500">Failed to load.</p>}
+      <ul class="divide-y divide-gray-100">
+        {posts()?.slice(0,3).map(p => (
+          <li class="py-3 first:pt-0 last:pb-0">
+            <A href={`/blog/${p.slug}`} class="group block">
+              <div class="flex items-start justify-between">
+                <span class="font-medium text-gray-900 group-hover:underline">{p.title}</span>
+                <span class="ml-4 shrink-0 text-[11px] text-gray-400 tabular-nums">{p.date}</span>
+              </div>
+              {p.excerpt && <p class="mt-1 text-xs text-gray-600 line-clamp-2">{p.excerpt}</p>}
+            </A>
+          </li>
+        ))}
+        {posts()?.length === 0 && !posts.loading && !posts.error && (
+          <li class="py-2 text-xs text-gray-500">No posts yet.</li>
+        )}
+      </ul>
+      <div class="mt-4 text-right">
+        <A href="/blog" class="text-xs text-blue-600 hover:underline">More →</A>
+      </div>
+    </div>
+  );
+}
 
 function Education() {
   return (
@@ -58,8 +93,8 @@ function BlogSection() {
   return (
     <section class="mb-16">
       <h2 class="text-2xl font-normal text-gray-900 mb-4">Blog</h2>
-      <p class="text-sm text-gray-600 mb-4">最新記事はブログ一覧で確認できます。</p>
-      <A href="/blog" class="text-blue-600 hover:underline">Go to Blog →</A>
+      <p class="text-sm text-gray-600 mb-4">最新 3 件のプレビューです。</p>
+      <BlogPreview />
     </section>
   );
 }

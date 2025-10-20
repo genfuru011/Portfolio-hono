@@ -3,5 +3,9 @@ main = "src/index.tsx"
 compatibility_date = "2025-08-03"
 compatibility_flags = ["nodejs_compat"]
 
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
 [vars]
 NODE_ENV = "production"

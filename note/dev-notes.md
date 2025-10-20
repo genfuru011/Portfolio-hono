@@ -21,7 +21,10 @@
    - `wrangler.jsonc` を削除
    - `package.json` の `build` を `vite build` に変更
 5. 利用していない `env.*` セクションを `wrangler.toml` から削除（デプロイ時の環境警告解消）。
-6. Biome の実行ログ（該当ファイル/行/ルールID）を共有いただき、他の警告があれば順次対応。
+6. `public` 配信を有効化：`wrangler.toml` に `[assets] directory = "./public" binding = "ASSETS"` を追加。
+   - HTML/JSX からは `/images/...`, `/favicon.ico` といったパスで参照可能。
+7. トップのプロフィール画像参照先を外部URL → `/images/profile.jpg` に変更。
+8. Biome の実行ログ（該当ファイル/行/ルールID）を共有いただき、他の警告があれば順次対応。
 
 ## 恒久対応（提案）
 - Biome 設定を追加し、Hono の JSX 事情（`jsxImportSource: "hono/jsx"`）に合わせる。

@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "build:css": "unocss -c uno.config.ts \"src/**/*.{ts,tsx,js,jsx,html}\" -o public/uno.css",
+    "build:css": "tailwindcss -i ./src/style.css -o ./public/tailwind.css --minify",
     "build": "npm run build:css && wrangler deploy --dry-run",
     "preview": "wrangler dev --local",
     "deploy": "wrangler deploy",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.2.3",
+    "@tailwindcss/cli": "^4.1.14",
     "@types/node": "^24.2.0",
     "@unocss/cli": "^66.5.4",
     "typescript": "^5.9.2",

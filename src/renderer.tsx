@@ -7,7 +7,7 @@ export const renderer = jsxRenderer(({ children }) => {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hiroto Furugen - Portfolio</title>
-        <link rel="stylesheet" href="/uno.css" />
+        <link rel="stylesheet" href="/tailwind.css" />
         <style>{`
           body {
             background: #ffffff;

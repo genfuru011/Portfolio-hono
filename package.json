@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "build": "wrangler deploy --dry-run",
+    "build:css": "unocss -c uno.config.ts \"src/**/*.{ts,tsx,js,jsx,html}\" -o public/uno.css",
+    "build": "npm run build:css && wrangler deploy --dry-run",
     "preview": "wrangler dev --local",
     "deploy": "wrangler deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings"
@@ -17,7 +18,9 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.2.3",
     "@types/node": "^24.2.0",
+    "@unocss/cli": "^66.5.4",
     "typescript": "^5.9.2",
+    "unocss": "^66.5.4",
     "vite": "^6.3.5",
     "vite-ssr-components": "^0.3.0",
     "wrangler": "^4.17.0"

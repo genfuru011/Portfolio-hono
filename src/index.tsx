@@ -1,9 +1,19 @@
 import { Hono } from "hono";
 import { renderer } from "./renderer";
 
-const app = new Hono();
+type CloudflareBindings = {
+  ASSETS: {
+    fetch: (request: Request) => Promise<Response>;
+  };
+};
+
+const app = new Hono<{ Bindings: CloudflareBindings }>();
 
 app.use(renderer);
+
+// Static assets served via Wrangler [assets]
+app.get("/favicon.ico", (c) => c.env.ASSETS.fetch(c.req.raw));
+app.get("/images/*", (c) => c.env.ASSETS.fetch(c.req.raw));
 
 const App = () => {
   return (

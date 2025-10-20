@@ -12,6 +12,9 @@
     - `src/style.css` を新規作成（`@import "tailwindcss";`）。
     - `public/tailwind.css` をビルド生成し配信。
   - 開発ノートを追加/更新: `note/dev-notes.md`。
+  - Lint無視設定を追加: ビルド生成物を対象外に（`biome.json` の `files.ignore`）。
+  - Biome を npm に導入: `@biomejs/biome` を devDependencies へ追加、`npm run lint|lint:fix|format|check` を定義。
+  - Zed拡張互換のため `biome.json` を最小構成に調整（`$schema` を削除、無難な ignore パターンに変更）。
 
 - 変更
   - Wrangler設定を整理: `wrangler.toml` を単一ソースに統一し、`compatibility_date = "2025-08-03"` に更新、`main = "src/index.tsx"` に設定。
@@ -34,6 +37,7 @@
   - `wrangler.jsonc`（設定の二重管理解消）。
   - UnoCSS関連ファイル（移行に伴い撤去）: `uno.config.ts`, `public/uno.css`。
   - `note/dev-notes.md`（内容は本 `changelog.md` に統合）。
+  - `.biomeignore`（`biome.json` へ移行）。
 
 - デプロイ
   - Cloudflare Workers へデプロイ済み。

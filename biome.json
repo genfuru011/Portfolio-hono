@@ -1,0 +1,11 @@
+{
+  "files": {
+    "ignore": [
+      "public/tailwind.css",
+      "dist",
+      "dist-server",
+      ".wrangler",
+      "node_modules"
+    ]
+  }
+}

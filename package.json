@@ -7,7 +7,11 @@
     "build": "npm run build:css && wrangler deploy --dry-run",
     "preview": "wrangler dev --local",
     "deploy": "wrangler deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "check": "biome check ."
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
@@ -17,6 +21,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.2.3",
+    "@biomejs/biome": "^1.9.4",
     "@tailwindcss/cli": "^4.1.14",
     "@types/node": "^24.2.0",
     "@unocss/cli": "^66.5.4",

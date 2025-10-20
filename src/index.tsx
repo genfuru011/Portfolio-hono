@@ -74,7 +74,7 @@ const App = () => {
             <div class="border-l-2 border-gray-200 pl-8 ml-2">
               <div class="mb-8">
                 <div class="flex items-start">
-                  <div class="flex-shrink-0 w-4 h-4 bg-blue-500 rounded-full -ml-10 mt-1 border-4 border-white shadow"></div>
+                  <div class="flex-shrink-0 w-4 h-4 bg-blue-500 rounded-full -ml-10 mt-1 border-4 border-white shadow" />
                   <div class="ml-6">
                     <h3 class="text-xl font-medium text-gray-900 mb-1">
                       Hosei University
@@ -94,7 +94,7 @@ const App = () => {
             <div class="border-l-2 border-gray-200 pl-8 ml-2">
               <div class="mb-8">
                 <div class="flex items-start">
-                  <div class="flex-shrink-0 w-4 h-4 bg-blue-500 rounded-full -ml-10 mt-1 border-4 border-white shadow"></div>
+                  <div class="flex-shrink-0 w-4 h-4 bg-blue-500 rounded-full -ml-10 mt-1 border-4 border-white shadow" />
                   <div class="ml-6">
                     <h3 class="text-xl font-medium text-gray-900 mb-1">
                       LayerX Inc.
@@ -107,7 +107,7 @@ const App = () => {
 
               <div class="mb-8">
                 <div class="flex items-start">
-                  <div class="flex-shrink-0 w-4 h-4 bg-gray-300 rounded-full -ml-10 mt-1 border-4 border-white shadow"></div>
+                  <div class="flex-shrink-0 w-4 h-4 bg-gray-300 rounded-full -ml-10 mt-1 border-4 border-white shadow" />
                   <div class="ml-6">
                     <h3 class="text-xl font-medium text-gray-900 mb-1">
                       GMO Internet Inc.

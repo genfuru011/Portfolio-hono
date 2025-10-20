@@ -70,15 +70,17 @@ const App = () => {
               <span>Educations</span>
             </h2>
 
-            <div class="relative border-l-2 border-gray-200 pl-8 ml-2">
-              <div class="mb-8 relative">
-                <span class="absolute left-0 -translate-x-1/2 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow"></span>
-                <div>
-                  <h3 class="text-xl font-medium text-gray-900 mb-1">
-                    Hosei University
-                  </h3>
-                  <p class="text-gray-600 mb-2">Bachelor of Arts, BA</p>
-                  <p class="text-gray-500 text-sm">April 2024 - Present</p>
+            <div class="border-l-2 border-gray-200 pl-8 ml-2">
+              <div class="mb-8">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 w-4 h-4 bg-blue-500 rounded-full -ml-10 mt-1 border-4 border-white shadow"></div>
+                  <div class="ml-6">
+                    <h3 class="text-xl font-medium text-gray-900 mb-1">
+                      Hosei University
+                    </h3>
+                    <p class="text-gray-600 mb-2">Bachelor of Arts, BA</p>
+                    <p class="text-gray-500 text-sm">April 2024 - Present</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -88,26 +90,32 @@ const App = () => {
           <section class="mb-16">
             <h2 class="text-2xl font-normal text-gray-900 mb-8">Experience</h2>
 
-            <div class="relative border-l-2 border-gray-200 pl-8 ml-2">
-              <div class="mb-8 relative">
-                <span class="absolute left-0 -translate-x-1/2 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow"></span>
-                <div>
-                  <h3 class="text-xl font-medium text-gray-900 mb-1">
-                    LayerX Inc.
-                  </h3>
-                  <p class="text-gray-600 mb-2">PMM Intern</p>
-                  <p class="text-gray-500 text-sm">August 2025 - Present</p>
+            <div class="border-l-2 border-gray-200 pl-8 ml-2">
+              <div class="mb-8">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 w-4 h-4 bg-blue-500 rounded-full -ml-10 mt-1 border-4 border-white shadow"></div>
+                  <div class="ml-6">
+                    <h3 class="text-xl font-medium text-gray-900 mb-1">
+                      LayerX Inc.
+                    </h3>
+                    <p class="text-gray-600 mb-2">PMM Intern</p>
+                    <p class="text-gray-500 text-sm">August 2025 - Present</p>
+                  </div>
                 </div>
               </div>
 
-              <div class="mb-8 relative">
-                <span class="absolute left-0 -translate-x-1/2 top-1 w-4 h-4 bg-gray-300 rounded-full border-4 border-white shadow"></span>
-                <div>
-                  <h3 class="text-xl font-medium text-gray-900 mb-1">
-                    GMO Internet Inc.
-                  </h3>
-                  <p class="text-gray-600 mb-2">Marketing Strategy Intern</p>
-                  <p class="text-gray-500 text-sm">December 2024 - July 2025</p>
+              <div class="mb-8">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 w-4 h-4 bg-gray-300 rounded-full -ml-10 mt-1 border-4 border-white shadow"></div>
+                  <div class="ml-6">
+                    <h3 class="text-xl font-medium text-gray-900 mb-1">
+                      GMO Internet Inc.
+                    </h3>
+                    <p class="text-gray-600 mb-2">Marketing Strategy Intern</p>
+                    <p class="text-gray-500 text-sm">
+                      December 2024 - July 2025
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

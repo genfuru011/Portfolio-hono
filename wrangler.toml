@@ -9,3 +9,6 @@ binding = "ASSETS"
 
 [vars]
 NODE_ENV = "production"
+
+[build]
+command = "npm run build:css"

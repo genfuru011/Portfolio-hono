@@ -14,6 +14,7 @@ app.use(renderer);
 // Static assets served via Wrangler [assets]
 app.get("/favicon.ico", (c) => c.env.ASSETS.fetch(c.req.raw));
 app.get("/images/*", (c) => c.env.ASSETS.fetch(c.req.raw));
+app.get("/tailwind.css", (c) => c.env.ASSETS.fetch(c.req.raw));
 
 const App = () => {
   return (

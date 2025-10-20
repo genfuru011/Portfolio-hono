@@ -5,9 +5,3 @@ compatibility_flags = ["nodejs_compat"]
 
 [vars]
 NODE_ENV = "production"
-
-[env.production]
-name = "portfolio-hono"
-
-[env.development]
-name = "portfolio-hono-dev"

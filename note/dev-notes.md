@@ -20,7 +20,8 @@
    - `wrangler.toml` の `main = "dist/_worker.js"`、`compatibility_date = "2025-08-03"`、`[build] command = "vite build"`
    - `wrangler.jsonc` を削除
    - `package.json` の `build` を `vite build` に変更
-5. Biome の実行ログ（該当ファイル/行/ルールID）を共有いただき、他の警告があれば順次対応。
+5. 利用していない `env.*` セクションを `wrangler.toml` から削除（デプロイ時の環境警告解消）。
+6. Biome の実行ログ（該当ファイル/行/ルールID）を共有いただき、他の警告があれば順次対応。
 
 ## 恒久対応（提案）
 - Biome 設定を追加し、Hono の JSX 事情（`jsxImportSource: "hono/jsx"`）に合わせる。
